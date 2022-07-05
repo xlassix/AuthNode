@@ -19,6 +19,7 @@
     "cuid": "^2.1.8",
     "loadash": "^1.0.0",
     "morgan": "^1.10.0",
+    "node-fetch": "^3.2.6",
     "underscore": "^1.13.1",
     "validator": "^13.7.0",
     "web3": "^1.7.4"
