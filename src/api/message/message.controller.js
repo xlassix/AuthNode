@@ -1,6 +1,6 @@
 import web3 from "web3";
 import { v4 as uuidv4 } from "uuid";
-import fetch from "node-fetch";
+import axios from "axios";
 
 const urls = [
   "http://ec2-13-232-52-9.ap-south-1.compute.amazonaws.com/api/message/1",
@@ -19,14 +19,15 @@ const createMessage = async (req, res) => {
 
   const data = await Promise.all(
     urls.map((url) =>
-      fetch(url, {
+      axios({
+        url,
         method: "POST",
-        body: JSON.stringify({ address, message }),
+        data: JSON.stringify({ address, message }),
         credentials: "include",
         headers: {
           "Content-Type": "application/json",
         },
-      }).then((res) => res.json())
+      }).then((res) => res.data)
     )
   );
   return res.status(201).json(data);
