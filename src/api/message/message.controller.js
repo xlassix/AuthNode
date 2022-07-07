@@ -11,11 +11,11 @@ const urls = [
 ];
 
 const createMessage = async (req, res) => {
-  const address = req.params.address;
+  const address = req.params.address.toLowerCase();
   if (!web3.utils.isAddress(address)) {
     return res.status(406).json({ message: "Invalid address" });
   }
-  const message = uuidv4().toString().split("-").join("");
+  const message = uuidv4().toString();
 
   const data = await Promise.all(
     urls.map((url) =>
