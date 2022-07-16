@@ -3,11 +3,11 @@ import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 
 const urls = [
-  "http://ec2-13-232-52-9.ap-south-1.compute.amazonaws.com/api/message/1",
-  "http://ec2-13-232-52-9.ap-south-1.compute.amazonaws.com/api/message/2",
-  "http://ec2-13-232-52-9.ap-south-1.compute.amazonaws.com/api/message/3",
-  "http://ec2-13-232-52-9.ap-south-1.compute.amazonaws.com/api/message/4",
-  "http://ec2-13-232-52-9.ap-south-1.compute.amazonaws.com/api/message/5",
+  "http://ec2-13-233-252-81.ap-south-1.compute.amazonaws.com/api/message/1",
+  "http://ec2-13-233-252-81.ap-south-1.compute.amazonaws.com/api/message/2",
+  "http://ec2-13-233-252-81.ap-south-1.compute.amazonaws.com/api/message/3",
+  "http://ec2-13-233-252-81.ap-south-1.compute.amazonaws.com/api/message/4",
+  "http://ec2-13-233-252-81.ap-south-1.compute.amazonaws.com/api/message/5",
 ];
 
 const createMessage = async (req, res) => {
